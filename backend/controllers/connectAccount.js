@@ -6,7 +6,7 @@ const connectFedex = async (req, res) => {
     const { userId, password } = req.body;
 
     if (userId && password) {
-        const browser = await chromium.launch({ headless: true });
+        const browser = await chromium.launch({ headless: false });
 
       const page = await browser.newPage();
 
