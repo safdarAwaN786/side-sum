@@ -1,18 +1,17 @@
 const express = require("express");
 const http = require("http");
 const app = express();
-const dotenv = require('dotenv');
+const dotenv = require("dotenv");
 dotenv.config();
 const cors = require("cors");
 const server = http.createServer(app);
-const testRoute = require('./routes/test')
-const connectDb = require('./config/db')
+const accConnectionsRoutes = require("./routes/accountConnection");
+const connectDb = require("./config/db");
 
 app.use(cors());
 app.use(express.json());
 
-app.use(testRoute)
-
+app.use(accConnectionsRoutes);
 
 server.listen(5005, () => {
   try {
