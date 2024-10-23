@@ -6,7 +6,7 @@ dotenv.config();
 const cors = require("cors");
 const server = http.createServer(app);
 const accConnectionsRoutes = require("./routes/accountConnection");
-const connectDb = require("./config/db");
+// const connectDb = require("./config/db");
 
 app.use(cors());
 app.use(express.json());
